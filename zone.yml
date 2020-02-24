@@ -1,0 +1,11 @@
+version: '3'
+services:
+    node: # 
+      image: node
+      container_name: gf-node
+      working_dir: /workspace
+      volumes:
+        - ./:/workspace
+      ports:
+        - "9529:9529"
+      command: "/bin/sh ./update.sh"

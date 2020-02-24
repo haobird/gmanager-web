@@ -85,7 +85,7 @@ export const constantRoutes = [
         meta: { title: '日志管理', icon: 'link' }
       },
       {
-        path: 'system/config/index',
+        path: 'system/option/index',
         name: 'Config',
         component: () => import('@/views/sysmanage/config/index'),
         meta: { title: '配置管理', icon: 'link' }

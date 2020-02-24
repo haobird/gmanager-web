@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function getList(data) {
   return request({
-    url: '/system/config/page',
+    url: '/system/option/page',
     method: 'post',
     data
   })
@@ -10,21 +10,21 @@ export function getList(data) {
 
 export function getDetail(id) {
   return request({
-    url: `/system/config/get/${id}`,
+    url: `/system/option/get/${id}`,
     method: 'get'
   })
 }
 
 export function getType() {
   return request({
-    url: '/system/config/type',
+    url: '/system/option/type',
     method: 'get'
   })
 }
 
 export function save(data) {
   return request({
-    url: '/system/config/save',
+    url: '/system/option/save',
     method: 'post',
     data
   })
@@ -32,7 +32,7 @@ export function save(data) {
 
 export function del(id) {
   return request({
-    url: `/system/config/delete/${id}`,
+    url: `/system/option/delete/${id}`,
     method: 'post'
   })
 }

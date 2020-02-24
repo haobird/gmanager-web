@@ -21,17 +21,17 @@
         />
       </el-form-item>
 
-      <el-form-item prop="passwd">
+      <el-form-item prop="password">
         <span class="svg-container">
           <svg-icon icon-class="password" />
         </span>
         <el-input
           :key="passwordType"
           ref="password"
-          v-model="loginForm.passwd"
+          v-model="loginForm.password"
           :type="passwordType"
           placeholder="Password"
-          name="passwd"
+          name="password"
           tabindex="2"
           auto-complete="on"
           @keyup.enter.native="handleLogin"
@@ -79,11 +79,11 @@ export default {
       title: title,
       loginForm: {
         username: 'admin',
-        passwd: '123456'
+        password: '123456'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
-        passwd: [{ required: true, trigger: 'blur', validator: validatePassword }]
+        password: [{ required: true, trigger: 'blur', validator: validatePassword }]
       },
       loading: false,
       passwordType: 'password',
@@ -113,7 +113,7 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
-          this.$store.dispatch('user/login', { ...this.loginForm, passwd: MD5(this.loginForm.passwd) }).then(() => {
+          this.$store.dispatch('user/login', { ...this.loginForm, password: MD5(this.loginForm.password) }).then(() => {
             this.$router.push({ path: this.redirect || '/' })
             this.loading = false
           }).catch(() => {

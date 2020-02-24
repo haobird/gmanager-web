@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function getList(data) {
   return request({
-    url: '/system/log/page',
+    url: '/system/loo/page',
     method: 'post',
     data
   })
@@ -10,7 +10,7 @@ export function getList(data) {
 
 export function getDetail(id) {
   return request({
-    url: `/system/log/get/${id}`,
+    url: `/system/loo/get/${id}`,
     method: 'get'
   })
 }
